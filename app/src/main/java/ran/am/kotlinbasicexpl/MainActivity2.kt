@@ -13,16 +13,16 @@ class MainActivity2 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-      //  b = DataBindingUtil.setContentView(this, R.layout.activity_main2)
+        b = DataBindingUtil.setContentView(this, R.layout.activity_main2)
 
       //  b.textView.setText(intent.getStringExtra("sdfsd"))
-        setContentView(R.layout.activity_main2)
+        //setContentView(R.layout.activity_main2)
 
         // getting the recyclerview by its id
-        val recyclerview = findViewById<RecyclerView>(R.id.recyclerview)
+
 
         // this creates a vertical layout Manager
-        recyclerview.layoutManager = LinearLayoutManager(this)
+        b.recyclerview.layoutManager = LinearLayoutManager(this)
 
         // ArrayList of class ItemsViewModel
         val data = ArrayList<ItemsViewModel>()
@@ -37,6 +37,6 @@ class MainActivity2 : AppCompatActivity() {
         val adapter = CustomAdapter(data)
 
         // Setting the Adapter with the recyclerview
-        recyclerview.adapter = adapter
+        b.recyclerview.adapter = adapter
     }
 }
